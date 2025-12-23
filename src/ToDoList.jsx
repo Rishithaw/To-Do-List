@@ -35,7 +35,7 @@ function ToDoList() {
           onChange={handleInputChange}
           placeholder="Enter a new task"
         />
-        <button onClick={addTask}>Add Task</button>
+        <button className="add-button" onClick={addTask}>Add Task</button>
       </div>
 
       <ol>
@@ -43,8 +43,8 @@ function ToDoList() {
           <li key={index}>
             <span className="text">{task}</span>
             <button className="delete-button" onClick={() => deleteTask(index)}>Delete</button>
-            <button className="move-up-button" onClick={() => moveTaskUp(index)}>Move Up</button>
-            <button className="move-down-button" onClick={() => moveTaskDown(index)}>Move Down</button>
+            <button className="move-button" onClick={() => moveTaskUp(index)}>Move Up</button>
+            <button className="move-button" onClick={() => moveTaskDown(index)}>Move Down</button>
           </li>
         ))}
       </ol>
