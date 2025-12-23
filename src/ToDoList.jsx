@@ -9,7 +9,10 @@ function ToDoList() {
   }
 
   function addTask() {
-
+    if (newTask.trim() === ""){
+      setTasks(t => [...t, newTask]);
+      setNewTask("");
+    }
   }
 
   function deleteTask() {
